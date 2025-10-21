@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Does God Dwell In Pauls Valley?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .clock {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #764ba2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #764ba2;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .angel-stage {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .disco-floor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff0080 25%, #ff8c00 25%, #ff8c00 50%, #ff0080 50%, #ff0080 75%, #ff8c00 75%, #ff8c00);
+            background-size: 40px 40px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 0;
+        }
+        
+        .disco-floor.active {
+            opacity: 0.3;
+            animation: disco 1s linear infinite;
+        }
+        
+        @keyframes disco {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 40px; }
+        }
+        
+        .angels-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .angel {
+            font-size: 100px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .angel.dancing {
+            animation: dance 0.5s ease-in-out infinite;
+        }
+        
+        @keyframes dance {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            25% { transform: translateY(-20px) rotate(5deg); }
+            50% { transform: translateY(0) rotate(-5deg); }
+            75% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        .church-directory {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .church-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .church-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .church-card p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        
+        .weather-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .weather-day {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .weather-day h4 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .weather-icon {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #764ba2;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #764ba2;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta h2 {
+            color: white;
+            border: none;
+            margin-bottom: 15px;
+        }
+        
+        .cta p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        footer {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer p {
+            color: #764ba2;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock" id="clock"></div>
+        
+        <header>
+            <h1>Does God Dwell In Pauls Valley?</h1>
+        </header>
+        
+        <div class="angel-stage" id="angelStage">
+            <div class="disco-floor" id="discoFloor"></div>
+            <div class="angels-group">
+                <div class="angel">👼🏿</div>
+                <div class="angel">👼🏾</div>
+                <div class="angel" id="angel">👼🏽</div>
+                <div class="angel">👼🏼</div>
+                <div class="angel">👼🏻</div>
+            </div>
+            <p style="position: relative; z-index: 1; margin-top: 20px; font-size: 1.2em; color: #764ba2; font-weight: bold;">Click the angels to start the celebration!</p>
+        </div>
+        
+        <audio id="music" loop>
+            <source src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Freedom-Song.mp3" type="audio/mpeg">
+        </audio>
+        
+        <div class="section">
+            <h2>About Pauls Valley</h2>
+            <p>Pauls Valley, Oklahoma, is a charming city located in Garvin County with a rich history dating back to the 1800s. Named after Smith Paul, a Chickasaw farmer who established a trading post in the area, the city grew rapidly after the arrival of the Santa Fe Railroad in 1887. Originally a cattle ranching hub, Pauls Valley became known as the "Gateway to Lake Country" due to its proximity to several recreational lakes. The city is famous for being the home of Toy Box, one of the world's largest toy museums, and for its strong agricultural heritage, particularly in wheat and cotton production. Today, Pauls Valley blends its historical charm with modern amenities, serving as a vital community center in south-central Oklahoma with a warm, welcoming spirit that reflects its deep roots and strong sense of community.</p>
+        </div>
+        
+        <div class="section">
+            <h2>The Need for 24/7 Worship</h2>
+            <p>In our modern world, spiritual needs don't follow a schedule. People experience crises, seek comfort, and desire connection with God at all hours of the day and night. Unfortunately, Pauls Valley currently has no church that remains open 24 hours a day, 7 days a week. This creates a gap in spiritual care for those who work night shifts, experience late-night emergencies, or simply need a quiet place to pray during unconventional hours. A 24/7 open church would serve as a beacon of hope, a sanctuary always available for prayer, meditation, and spiritual guidance. It would demonstrate that God's house is truly always open, reflecting the constant availability of divine love and support. This is not just about physical access to a building—it's about creating a continuous spiritual presence in our community, ensuring that no one ever feels alone or without a place to turn in their time of need.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Church Directory</h2>
+            <div class="church-directory">
+                <div class="church-card">
+                    <h3>First Baptist Church</h3>
+                    <p>📞 Phone: (405) 238-5536</p>
+                    <p>📍 Address: 401 W Grant Ave, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 9:00 AM - 12:00 PM, Wednesday 6:00 PM - 8:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>First United Methodist Church</h3>
+                    <p>📞 Phone: (405) 238-2384</p>
+                    <p>📍 Address: 220 W Paul Ave, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:30 AM - 12:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>Church of Christ</h3>
+                    <p>📞 Phone: (405) 238-7503</p>
+                    <p>📍 Address: 100 S Walnut St, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 9:00 AM - 12:00 PM, Wednesday 7:00 PM - 8:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>First Christian Church</h3>
+                    <p>📞 Phone: (405) 238-2456</p>
+                    <p>📍 Address: 301 N Willow St, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:00 AM - 12:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>St. Peter's Catholic Church</h3>
+                    <p>📞 Phone: (405) 238-5158</p>
+                    <p>📍 Address: 315 S Willow St, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Saturday 5:00 PM - 6:00 PM, Sunday 11:00 AM - 12:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>First Assembly of God</h3>
+                    <p>📞 Phone: (405) 238-6423</p>
+                    <p>📍 Address: 600 S Santa Fe Ave, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:00 AM - 12:00 PM, Wednesday 7:00 PM - 8:30 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>New Hope Missionary Baptist Church</h3>
+                    <p>📞 Phone: (405) 238-3644</p>
+                    <p>📍 Address: 702 S Chickasaw Ave, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 11:00 AM - 1:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>Mt. Zion Baptist Church</h3>
+                    <p>📞 Phone: (405) 238-2947</p>
+                    <p>📍 Address: 400 S Ash St, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:00 AM - 12:30 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>Calvary Baptist Church</h3>
+                    <p>📞 Phone: (405) 238-6404</p>
+                    <p>📍 Address: 1200 W Grant Ave, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:45 AM - 12:00 PM, Wednesday 6:30 PM - 8:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>Grace Lutheran Church</h3>
+                    <p>📞 Phone: (405) 238-5296</p>
+                    <p>📍 Address: 1116 W Grant Ave, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:00 AM - 11:00 AM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>Pauls Valley Church of the Nazarene</h3>
+                    <p>📞 Phone: (405) 238-6182</p>
+                    <p>📍 Address: 804 N Chickasaw Ave, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:30 AM - 12:00 PM, Wednesday 7:00 PM - 8:00 PM</p>
+                </div>
+                
+                <div class="church-card">
+                    <h3>Freedom Fellowship Church</h3>
+                    <p>📞 Phone: (405) 207-0527</p>
+                    <p>📍 Address: 401 S Ash St, Pauls Valley, OK 73075</p>
+                    <p>🕐 Hours: Sunday 10:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>7-Day Weather Forecast</h2>
+            <div class="weather-section" id="weather"></div>
+        </div>
+        
+        <div class="cta">
+            <h2>Join The Open Church Project</h2>
+            <p>Be part of a movement to create a 24/7 spiritual sanctuary in Pauls Valley. Together, we can ensure that God's house is always open, providing a place of refuge, prayer, and community for all who seek it, at any hour of the day or night. Your support can help make this vision a reality!</p>
+        </div>
+        
+        <div class="section">
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="https://formsubmit.co/openchurchproject1@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <input type="hidden" name="_subject" value="New Contact from Open Church Project">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+        <footer>
+            <p>Pauls Valley, Oklahoma</p>
+            <p>Latitude: 34.7398° N | Longitude: -97.2217° W</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Clock
+        function updateClock() {
+            const now = new Date();
+            const options = {
+                timeZone: 'America/Chicago',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const timeString = now.toLocaleTimeString('en-US', options);
+            document.getElementById('clock').textContent = `Current Time in Pauls Valley: ${timeString}`;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+        
+        // Angel dancing
+        const angelStage = document.getElementById('angelStage');
+        const music = document.getElementById('music');
+        const discoFloor = document.getElementById('discoFloor');
+        let isPlaying = false;
+        
+        angelStage.addEventListener('click', function() {
+            const allAngels = document.querySelectorAll('.angel');
+            if (!isPlaying) {
+                music.play();
+                allAngels.forEach(a => a.classList.add('dancing'));
+                discoFloor.classList.add('active');
+                isPlaying = true;
+            } else {
+                music.pause();
+                allAngels.forEach(a => a.classList.remove('dancing'));
+                discoFloor.classList.remove('active');
+                isPlaying = false;
+            }
+        });
+        
+        // Weather forecast
+        async function getWeather() {
+            try {
+                const lat = 34.7398;
+                const lon = -97.2217;
+                const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,weathercode&temperature_unit=fahrenheit&timezone=America%2FChicago&forecast_days=7`);
+                
+                if (!response.ok) {
+                    throw new Error('Weather API request failed');
+                }
+                
+                const data = await response.json();
+                
+                const weatherContainer = document.getElementById('weather');
+                weatherContainer.innerHTML = '';
+                
+                const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                
+                for (let i = 0; i < 7; i++) {
+                    const date = new Date(data.daily.time[i]);
+                    const dayName = days[date.getDay()];
+                    const maxTemp = Math.round(data.daily.temperature_2m_max[i]);
+                    const minTemp = Math.round(data.daily.temperature_2m_min[i]);
+                    const weatherCode = data.daily.weathercode[i];
+                    
+                    const weatherIcon = getWeatherIcon(weatherCode);
+                    
+                    const dayCard = document.createElement('div');
+                    dayCard.className = 'weather-day';
+                    dayCard.innerHTML = `
+                        <h4>${dayName}</h4>
+                        <div class="weather-icon">${weatherIcon}</div>
+                        <p>${maxTemp}°F / ${minTemp}°F</p>
+                    `;
+                    weatherContainer.appendChild(dayCard);
+                }
+            } catch (error) {
+                console.error('Weather fetch failed, showing sample data');
+                displaySampleWeather();
+            }
+        }
+        
+        function getWeatherIcon(code) {
+            if (code === 0) return '☀️';
+            if (code <= 3) return '🌤️';
+            if (code <= 48) return '☁️';
+            if (code <= 67) return '🌧️';
+            if (code <= 77) return '🌨️';
+            if (code <= 82) return '🌧️';
+            if (code <= 86) return '🌨️';
+            return '⛈️';
+        }
+        
+        function displaySampleWeather() {
+            const weatherContainer = document.getElementById('weather');
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            
+            const sampleData = [
+                { day: 'Monday', icon: '☀️', high: 72, low: 51 },
+                { day: 'Tuesday', icon: '🌤️', high: 75, low: 54 },
+                { day: 'Wednesday', icon: '☁️', high: 68, low: 49 },
+                { day: 'Thursday', icon: '🌧️', high: 64, low: 47 },
+                { day: 'Friday', icon: '🌤️', high: 70, low: 52 },
+                { day: 'Saturday', icon: '☀️', high: 76, low: 55 },
+                { day: 'Sunday', icon: '☀️', high: 78, low: 57 }
+            ];
+            
+            weatherContainer.innerHTML = '';
+            
+            for (let i = 0; i < 7; i++) {
+                const weather = sampleData[i];
+                
+                const dayCard = document.createElement('div');
+                dayCard.className = 'weather-day';
+                dayCard.innerHTML = `
+                    <h4>${weather.day}</h4>
+                    <div class="weather-icon">${weather.icon}</div>
+                    <p>${weather.high}°F / ${weather.low}°F</p>
+                `;
+                weatherContainer.appendChild(dayCard);
+            }
+        }
+        
+        getWeather();
+    </script>
+</body>
+</html>
