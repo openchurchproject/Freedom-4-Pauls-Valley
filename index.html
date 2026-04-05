@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>The Open Church Project – 24/7 Sanctuary | Radical Hospitality</title>
     
-    <!-- FAVICON: using the main logo -->
     <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-Logo-T.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-Logo-T.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-Logo-T.png">
@@ -48,7 +47,6 @@
             padding: 0 28px;
         }
 
-        /* ========= TOP LOGO - 10x larger ========= */
         .logo-header {
             width: 100%;
             background: transparent;
@@ -63,8 +61,6 @@
             max-width: 95vw;
         }
         
-        /* ========= AUTO-SCROLLING IMAGE GALLERY (every 2 seconds) ========= */
-        /* IMPROVED: Images now fully fit without cropping – object-fit contain, centered, consistent behavior */
         .gallery-section {
             width: 100%;
             background: transparent;
@@ -88,26 +84,23 @@
             will-change: transform;
         }
 
-        /* each slide becomes a flexible container that centers images perfectly */
         .slide {
             flex: 0 0 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             background: #1a1e1c;
-            min-height: 320px; /* fallback, but will expand based on image max-height */
+            min-height: 320px;
         }
 
-        /* Images now fully visible WITHOUT cropping: contain + max-height + auto width */
         .slide img {
             max-width: 100%;
-            max-height: 550px;      /* generous max-height for larger screens */
+            max-height: 550px;
             width: auto;
             height: auto;
             object-fit: contain;
             display: block;
             background: #1a1e1c;
-            transition: all 0.2s ease;
         }
 
         .slider-btn {
@@ -123,11 +116,9 @@
             cursor: pointer;
             z-index: 12;
             border-radius: 50px;
-            transition: all 0.2s ease;
         }
         .slider-btn:hover {
             background: var(--warm-coral);
-            transform: translateY(-50%) scale(1.05);
         }
         .slider-prev { left: 20px; }
         .slider-next { right: 20px; }
@@ -141,9 +132,6 @@
             justify-content: center;
             gap: 12px;
             z-index: 12;
-            flex-wrap: wrap;
-            max-width: 90%;
-            margin: 0 auto;
         }
         .dot {
             width: 10px;
@@ -151,29 +139,16 @@
             background: rgba(255,255,255,0.6);
             border-radius: 50%;
             cursor: pointer;
-            transition: all 0.2s;
         }
         .dot.active {
             background: var(--warm-coral);
             transform: scale(1.3);
         }
-        .dot:hover { background: var(--warm-coral); }
 
-        /* Responsive adjustments for smaller devices: images shrink gracefully but remain full-frame */
         @media (max-width: 750px) {
             .logo-header img { max-height: 50vh; }
             .slide img { max-height: 380px; }
-            .slide { min-height: 260px; }
             .slider-btn { font-size: 1.5rem; padding: 0.2rem 0.8rem; }
-            .slider-prev { left: 8px; }
-            .slider-next { right: 8px; }
-            .dot { width: 8px; height: 8px; }
-            .slider-dots { gap: 8px; bottom: 12px; }
-        }
-        @media (max-width: 480px) {
-            .logo-header img { max-height: 40vh; }
-            .slide img { max-height: 280px; }
-            .slide { min-height: 220px; }
         }
 
         .mission-bar {
@@ -181,8 +156,6 @@
             color: #F3EFE8;
             padding: 12px 20px;
             text-align: center;
-            font-size: 1rem;
-            font-weight: 500;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -213,17 +186,15 @@
             text-decoration: none;
             font-weight: 600;
             margin-left: 18px;
-            transition: all 0.2s;
             display: inline-block;
         }
         .food-ribbon a:hover {
             background: var(--accent-glow);
-            transform: translateY(-2px);
         }
 
         nav {
             background: var(--paper);
-            border-bottom: 1px solid var(--sand-stone);
+            border-bottom: 1px solid #DCCFBB;
             position: sticky;
             top: 0;
             z-index: 99;
@@ -239,10 +210,9 @@
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
-            padding: 8px 24px;
+            padding: 8px 20px;
             border-radius: 40px;
             color: var(--deep-slate);
-            transition: 0.2s;
         }
         .nav-links a:hover, .nav-links a.active-page-link {
             background: var(--warm-coral);
@@ -268,13 +238,6 @@
             font-size: 3.2rem;
             font-weight: 700;
             color: var(--deep-slate);
-            margin-bottom: 20px;
-        }
-        .hero p {
-            max-width: 680px;
-            margin: 0 auto 28px;
-            font-size: 1.1rem;
-            color: #4B5B5C;
         }
         .cta-button {
             background: var(--warm-coral);
@@ -283,8 +246,6 @@
             border-radius: 60px;
             font-weight: 600;
             display: inline-block;
-            transition: 0.2s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         .cta-button:hover {
             background: var(--accent-glow);
@@ -302,7 +263,7 @@
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 32px;
             margin: 48px 0;
         }
@@ -310,20 +271,13 @@
             background: var(--paper);
             border-radius: 32px;
             box-shadow: var(--shadow-light);
-            transition: all 0.25s ease;
             overflow: hidden;
             border: 1px solid #E5DDD0;
-        }
-        .feature-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--warm-coral);
         }
         .feature-icon {
             background: #FEF5ED;
             padding: 28px;
             text-align: center;
-            border-bottom: 1px solid #F0E5D8;
         }
         .feature-icon i { font-size: 2.3rem; color: var(--warm-coral); }
         .feature-content { padding: 28px; text-align: center; }
@@ -331,7 +285,6 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             margin-bottom: 12px;
-            color: var(--deep-slate);
         }
 
         .testimonials-grid {
@@ -346,23 +299,20 @@
             padding: 32px;
             box-shadow: var(--shadow-light);
             border: 1px solid #EADFCB;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
         }
         .testimony-img img {
             width: 100%;
             border-radius: 28px;
-            object-fit: cover;
             aspect-ratio: 16/9;
+            object-fit: cover;
             border: 2px solid var(--warm-coral);
+            margin-bottom: 20px;
         }
         .testimony-text h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.7rem;
             color: var(--deep-slate);
             margin-bottom: 18px;
-            text-align: center;
         }
         .testimony-text p { color: #3F4E4F; line-height: 1.65; }
 
@@ -371,7 +321,6 @@
             border-radius: 32px;
             padding: 36px;
             border-left: 8px solid var(--warm-coral);
-            box-shadow: var(--shadow-light);
         }
         .back-home {
             background: transparent;
@@ -379,13 +328,131 @@
             color: var(--deep-slate);
             padding: 10px 32px;
             border-radius: 60px;
-            font-weight: 500;
             display: inline-block;
-            transition: 0.2s;
         }
         .back-home:hover {
             background: var(--warm-coral);
             color: white;
+        }
+
+        /* Get Involved flyer grid */
+        .flyers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
+        }
+        .flyer-card {
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.2s ease;
+            border: 1px solid #EADFCB;
+            text-align: center;
+        }
+        .flyer-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .flyer-card img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            background: #f3efe8;
+            display: block;
+            border-bottom: 3px solid var(--warm-coral);
+        }
+        /* Join Coalition button styling */
+        .join-coalition-btn {
+            margin: 16px 20px 20px;
+        }
+        .join-coalition-btn a {
+            display: block;
+            background: var(--deep-slate);
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .join-coalition-btn a:hover {
+            background: var(--warm-coral);
+        }
+
+        /* New box for ministries */
+        .ministry-box {
+            background: var(--paper);
+            border-radius: 40px;
+            padding: 32px 28px;
+            margin: 50px 0;
+            box-shadow: var(--shadow-light);
+            border: 1px solid #EADFCB;
+            text-align: center;
+        }
+        .ministry-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: var(--deep-slate);
+        }
+        .ministry-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .ministry-links a {
+            background: #FEF5ED;
+            padding: 12px 28px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--deep-slate);
+            border: 1px solid var(--sand-stone);
+            transition: all 0.2s;
+        }
+        .ministry-links a:hover {
+            background: var(--warm-coral);
+            color: white;
+            border-color: var(--warm-coral);
+        }
+
+        /* Page button for Join The Coalition */
+        .page-join-btn {
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        .page-join-btn a {
+            background: var(--deep-slate);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        .page-join-btn a:hover {
+            background: var(--warm-coral);
+        }
+
+        /* Info box for land registration */
+        .info-box {
+            background: white;
+            border-radius: 32px;
+            padding: 32px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-light);
+            border: 1px solid #EADFCB;
+            text-align: center;
+        }
+        .info-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         footer {
@@ -411,10 +478,8 @@
             border-top: 1px solid #5F6F64;
             padding-top: 28px;
             margin-top: 32px;
-            font-size: 0.85rem;
         }
         a { color: var(--warm-coral); text-decoration: none; }
-        a:hover { color: var(--accent-glow); }
 
         .audio-player {
             position: fixed;
@@ -425,7 +490,6 @@
             border-radius: 60px;
             padding: 6px 18px;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
             border: 1px solid var(--warm-coral);
             display: flex;
             align-items: center;
@@ -446,17 +510,43 @@
             margin: 20px 0;
             border-radius: 20px;
         }
-        .food-guide { background: var(--paper); border-radius: 32px; padding: 32px; box-shadow: var(--shadow-light); }
+        .flyer-container {
+            background: linear-gradient(145deg, #FFF9F0 0%, #FFEFD6 100%);
+            border-radius: 64px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.3);
+            border: 2px solid var(--warm-coral);
+            margin: 30px 0 40px;
+        }
+        .flyer-image {
+            max-width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 3px solid white;
+            margin-bottom: 28px;
+        }
+        .register-btn {
+            background: var(--deep-slate);
+            color: white;
+            padding: 16px 42px;
+            font-size: 1.4rem;
+            border-radius: 60px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .register-btn:hover {
+            background: var(--accent-glow);
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
 
-<!-- LOGO - 10x larger -->
 <div class="logo-header">
-    <img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-Logo-T.png" alt="The Open Church Project Logo - 24/7 Sanctuary">
+    <img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-Logo-T.png" alt="The Open Church Project Logo">
 </div>
 
-<!-- AUTO-SCROLLING GALLERY (2 seconds) - 27 images, FULLY FIT WITHOUT CROPPING -->
 <div class="gallery-section">
     <div class="hero-slider" id="heroSlider">
         <div class="slider-wrapper" id="sliderWrapper"></div>
@@ -481,19 +571,23 @@
         <ul class="nav-links">
             <li><a href="#" data-page="home">🏠 Home</a></li>
             <li><a href="#" data-page="garden">🌱 Community Garden</a></li>
+            <li><a href="#" data-page="animalShelter">🐾 Animal Shelter</a></li>
+            <li><a href="#" data-page="events">📅 Events</a></li>
             <li><a href="#" data-page="founder">👥 Meet the Founder</a></li>
             <li><a href="#" data-page="shelter">🏚️ Start a Shelter</a></li>
             <li><a href="#" data-page="findShelter">🏨 Find a Shelter</a></li>
+            <li><a href="#" data-page="getInvolved">📢 Get Involved</a></li>
+            <li><a href="#" data-page="registration">📝 Homeless Land Registration</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- HOME PAGE -->
+<!-- HOME PAGE (unchanged) -->
 <div id="homePage" class="page active-page">
     <section class="hero">
         <div class="container">
             <h1>A Sanctuary Open to All, 24/7</h1>
-            <p>This is an idea and a concept taking shape. A board is forming to create a place where no door is locked and every person is welcomed with dignity. We are not yet an official organization — paperwork is in progress.</p>
+            <p style="margin: 20px auto; max-width: 680px;">This is an idea and a concept taking shape. A board is forming to create a place where no door is locked and every person is welcomed with dignity. We are not yet an official organization — paperwork is in progress.</p>
             <a href="#" data-page="becomeFounder" class="cta-button">Become a Founding Board Member →</a>
         </div>
     </section>
@@ -505,172 +599,173 @@
                 <p>Our vision is to create a sanctuary where basic human needs are met, where people find hope, healing, and purpose through community, prayer, and practical skill-building. Open 365 days, 24 hours a day.</p>
             </div>
         </section>
-
         <section>
             <h2 class="section-title">What We Hope To Offer</h2>
             <div class="feature-grid">
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-home"></i></div><div class="feature-content"><h3>24/7 Shelter & Housing</h3><p>Safe, warm spaces with dorms, campsites, showers, and laundry — always open.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-utensils"></i></div><div class="feature-content"><h3>Community Kitchen</h3><p>Three meals daily, 24/7 snacks, and a food pantry with fresh groceries.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-pray"></i></div><div class="feature-content"><h3>Prayer & Praise Room</h3><p>A quiet, sacred space open all hours for all faiths and none.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-laptop-code"></i></div><div class="feature-content"><h3>Skills Training</h3><p>Web design, app development, radio — marketable skills for a new start.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-hands-helping"></i></div><div class="feature-content"><h3>Counseling & Support</h3><p>Addiction counseling, mental health care, life coaching — no cost.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-tshirt"></i></div><div class="feature-content"><h3>Clothing & Necessities</h3><p>Free clothing closet, hygiene kits, blankets, and seasonal gear.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-university"></i></div><div class="feature-content"><h3>Online College Support</h3><p>Dedicated department to help guests enroll, access financial aid, and complete online degrees.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-hand-sparkles"></i></div><div class="feature-content"><h3>Habitation Training</h3><p>Life skills: hygiene, communication, professional etiquette, and social confidence.</p></div></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-briefcase"></i></div><div class="feature-content"><h3>Job Department</h3><p>Resume writing, interview preparation, job placement assistance, and career coaching.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-home"></i></div><div class="feature-content"><h3>24/7 Shelter</h3><p>Safe, warm spaces with dorms, campsites, showers, and laundry.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-utensils"></i></div><div class="feature-content"><h3>Community Kitchen</h3><p>Three meals daily, 24/7 snacks, and a food pantry.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-pray"></i></div><div class="feature-content"><h3>Prayer Room</h3><p>A quiet, sacred space open all hours.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-laptop-code"></i></div><div class="feature-content"><h3>Skills Training</h3><p>Web design, app development, radio — marketable skills.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-hands-helping"></i></div><div class="feature-content"><h3>Counseling</h3><p>Addiction counseling, mental health care, life coaching.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-tshirt"></i></div><div class="feature-content"><h3>Clothing</h3><p>Free clothing closet, hygiene kits, blankets.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-university"></i></div><div class="feature-content"><h3>Online College Support</h3><p>Help guests enroll, access financial aid, complete degrees.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-hand-sparkles"></i></div><div class="feature-content"><h3>Habitation Training</h3><p>Life skills: hygiene, communication, professional etiquette.</p></div></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-briefcase"></i></div><div class="feature-content"><h3>Job Department</h3><p>Resume writing, interview prep, job placement.</p></div></div>
             </div>
         </section>
-
         <div style="background: #F3EFE8; border-radius: 32px; padding: 40px; text-align: center; margin: 40px 0;">
-            <h2 style="font-family: 'Playfair Display', serif;">Stage 1: Founding Board Members</h2>
-            <p style="margin-top: 12px;">We are seeking 15 committed board members to establish vision, governance, and 501(c)(3) status. Join us in serving the marginalized.</p>
+            <h2 style="font-family: 'Playfair Display';">Stage 1: Founding Board Members</h2>
+            <p style="margin-top: 12px;">We are seeking 15 committed board members to establish vision, governance, and 501(c)(3) status.</p>
             <div style="background: rgba(226,124,93,0.12); display: inline-block; padding: 10px 28px; border-radius: 60px; margin-top: 20px;">📞 405-832-4549 ✉️ openchurchproject1@gmail.com</div>
         </div>
-
         <section>
             <h2 class="section-title">Project Blueprint</h2>
-            <div style="text-align:center;"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-BP.png" alt="blueprint" style="max-width:100%; border-radius: 24px; border: 1px solid var(--warm-coral);"></div>
+            <div style="text-align:center;"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-BP.png" alt="blueprint" style="max-width:100%; border-radius: 24px;"></div>
         </section>
+
+        <div class="ministry-box">
+            <h3>📋 Start a Ministry or Register Land</h3>
+            <div class="ministry-links">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3C6t7l7CGzGyouNeehQdBDYRqKbR00Pga2rO84jHTb7evjw/viewform?usp=header" target="_blank" rel="noopener">🌱 Community Garden</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3C6t7l7CGzGyouNeehQdBDYRqKbR00Pga2rO84jHTb7evjw/viewform?usp=header" target="_blank" rel="noopener">🐾 Animal Shelter</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3C6t7l7CGzGyouNeehQdBDYRqKbR00Pga2rO84jHTb7evjw/viewform?usp=header" target="_blank" rel="noopener">🏚️ Start a Homeless Shelter</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3C6t7l7CGzGyouNeehQdBDYRqKbR00Pga2rO84jHTb7evjw/viewform?usp=header" target="_blank" rel="noopener">📝 Homeless Land Registration</a>
+            </div>
+        </div>
     </main>
 </div>
 
-<!-- COMMUNITY GARDEN -->
+<!-- COMMUNITY GARDEN (with Join The Coalition button) -->
 <div id="gardenPage" class="page">
     <div class="container" style="padding: 50px 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <h2 class="section-title">🌻 Starting a Community Garden – Just Grow & Give</h2>
-            <a href="#" data-page="gardensList" class="cta-button" style="background: var(--sage-green);">🔍 Find a Garden Near You</a>
-        </div>
-        <div style="background: white; border-radius: 32px; padding: 36px; box-shadow: var(--shadow-light);">
-            <div class="grassroots-highlight">
-                <i class="fas fa-seedling" style="color: var(--warm-coral); font-size: 2rem; margin-right: 12px;"></i> 
-                <strong>Anyone with a patch of dirt can start feeding their neighborhood.</strong>
-            </div>
-            <p>We help you turn your backyard, church lawn, or any empty space into a community garden. Whether you have a few raised beds or a whole field, we'll help you plan, gather soil and seeds, and connect with neighbors who want to grow together.</p>
-            <p><strong>How we support you:</strong> We advertise your garden project, rally volunteers, connect you with donated tools and seeds, and provide simple guides for planting and harvest sharing. No red tape. Just Jesus' way of feeding people directly.</p>
-            <p>We also help you link your garden to a food box or soup kitchen ministry so fresh produce goes straight to those in need.</p>
+        <h2 class="section-title">🌻 Starting a Community Garden – Just Grow & Give</h2>
+        <div style="background: white; border-radius: 32px; padding: 36px;">
+            <div class="grassroots-highlight"><i class="fas fa-seedling"></i> <strong>Anyone with a patch of dirt can start feeding their neighborhood.</strong></div>
+            <p>We help you turn your backyard, church lawn, or any empty space into a community garden. We'll help you plan, gather soil and seeds, and connect with neighbors.</p>
+            <p><strong>How we support you:</strong> Advertising, volunteer coordination, resource gathering, and practical guidance. No red tape.</p>
             <p><i class="fas fa-hands-helping"></i> <strong>Get started today:</strong> Call 405-832-4549 or email openchurchproject1@gmail.com.</p>
         </div>
-        <div style="text-align:center; margin-top:36px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
+        <div class="page-join-btn">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDSynxtUTw583CxynJRpFeBs_lwvyDgKieMIihXDJmpCCq9A/viewform?usp=header" target="_blank" rel="noopener">Community Garden Form</a>
+        </div>
+        <div style="text-align:center; margin-top: 20px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
     </div>
 </div>
 
-<!-- FOUNDER PAGE - FULL TESTIMONIES RESTORED -->
+<!-- ANIMAL SHELTER (with Join The Coalition button) -->
+<div id="animalShelterPage" class="page">
+    <div class="container" style="padding: 50px 20px;">
+        <h2 class="section-title">🐕 Start a Small Animal Shelter – Love on Paws</h2>
+        <div style="background: white; border-radius: 32px; padding: 36px;">
+            <div class="grassroots-highlight"><i class="fas fa-paw"></i> <strong>Got land, a garage, or a spare room? You can shelter animals in need.</strong></div>
+            <p>Stray animals, abandoned pets, and neglected creatures need compassionate people. You don't need a massive facility — a clean garage, a fenced backyard with simple shelters, or even a converted shed can become a temporary haven.</p>
+            <p><strong>How we support you:</strong> Advertising your shelter, volunteer coordination, resource gathering (food, bedding, crates), and practical guidance on basic animal care and rehoming. We connect you with local vets, foster networks, and adoption events.</p>
+            <p><strong>No permits needed to start showing compassion:</strong> Just a willing heart and safe space.</p>
+            <p><i class="fas fa-hand-holding-heart"></i> Ready to open your heart and property? Call 405-832-4549 or email openchurchproject1@gmail.com.</p>
+        </div>
+        <div class="page-join-btn">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeccNFMCFxOFz-SrYlGbvg0CkOsoy19iw-V4YOG0fdDNvuylg/viewform?usp=publish-editor" target="_blank" rel="noopener">Start Animal Shelter</a>
+        </div>
+        <div style="text-align:center; margin-top: 20px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
+    </div>
+</div>
+
+<!-- EVENTS PAGE -->
+<div id="eventsPage" class="page"><div class="container" style="padding: 50px 20px;"><h2 class="section-title">✨ Upcoming Gatherings & Outreach ✨</h2><div class="flyer-container"><img class="flyer-image" src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/LYN-TD-Flyer.jpg" alt="Love Your Neighbor - Together Day Festival Flyer"><a href="https://www.durantcharities.org" target="_blank" class="register-btn"><i class="fas fa-ticket-alt"></i> Register to Vend at durantcharities.org</a><p style="margin-top: 24px;">✨ Vendor spots, volunteers, and sponsors welcome. Join us in spreading radical hospitality! ✨</p></div><div style="background: white; border-radius: 32px; padding: 32px;"><h3 style="font-family: 'Playfair Display';">More Events Coming Soon</h3><p>Monthly community meals, volunteer training, garden workshops, and animal adoption days. Contact us to partner.</p></div><div style="text-align:center; margin-top:36px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div></div></div>
+
+<!-- FOUNDER PAGE (unchanged, all testimonies) -->
 <div id="founderPage" class="page">
     <div class="container" style="padding: 50px 20px;">
         <h2 class="section-title">Meet the Founder & Hear Some Testimonies</h2>
         <div style="background: #F4EFE8; border-radius: 32px; padding: 28px; margin-bottom: 48px; text-align: center;">
             <img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/homeless-families.jpg" style="width: 140px; height: 140px; border-radius: 60px; border: 3px solid var(--warm-coral); object-fit: cover; margin-bottom: 16px;">
-            <h3 style="font-family: 'Playfair Display', serif; font-size:1.8rem;">Shawn Polly – Founder's Heart</h3>
+            <h3 style="font-family: 'Playfair Display'; font-size:1.8rem;">Shawn Polly – Founder's Heart</h3>
             <p style="max-width: 700px; margin: 0 auto;">“I saw that the church doors were locked too often while people lived outside on their sidewalk. The Open Church Project was born from that ache — we must be open 24/7, no exceptions.”</p>
         </div>
         <div class="testimonials-grid">
-            <!-- Testimony 1: Bakersfield Rescue Mission -->
-            <div class="testimony-card">
-                <div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/How%20It%20All%20Begin.png" alt="testimony1"></div>
-                <div class="testimony-text"><h3>The Bakersfield Rescue Mission at 19</h3><p>At the age of 19, Shawn Polly flushed his mom’s meth and his great-uncle Billy Nix’s meth down the toilet and was kicked out of the house. He went on to live at the Bakersfield Rescue Mission, where he stayed in a dorm with around 200 men for over a year. During that time, he attended Bakersfield College and got a job while trying to rebuild his life. While in Bakersfield, he also started going to a church called Country Bible Church. One day, Shawn brought around 50 people from the Bakersfield Rescue Mission to church. They all loaded onto a city bus, and when they got off, it was a sight to see—a long line of the sick and afflicted walking about five blocks to get to the church. Some might say it looked like something out of the walking dead. That same day, Shawn and the pastor had gone and gotten supplies for a BBQ, and Shawn stayed outside cooking for everyone at the small Baptist church. Inside the church that day was his great-uncle Billy Nix, whose meth Shawn had flushed. Billy later told him what happened inside. The pastor had a breakdown and began yelling and calling people out by name, saying, “You have been coming here your entire life and you have brought nobody. Nineteen-year-old, homeless Shawn Polly has brought more people to church today than all of you put together for the entire time you’ve been here.” Shortly after that, the pastor began allowing homeless people to stay on the church property in tents, which sparked what many would describe as a kind of awakening within the church. Shawn had already left Bakersfield by the time this happened, moving on to something else he didn’t yet understand, but believes now was part of a bigger plan. What stands out about this moment is not just the conflict or the shock of it, but the impact—one young man, freshly homeless and trying to figure life out, ended up shifting the direction of an entire church without even realizing it at the time.</p></div>
-            </div>
-            <!-- Testimony 2: Sunny Brae Church -->
-            <div class="testimony-card">
-                <div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/SunnyBrae.png" alt="testimony2"></div>
-                <div class="testimony-text"><h3>Sunny Brae Church - Arcata, CA</h3><p>After leaving Bakersfield College, Shawn Polly transferred to College of the Redwoods in Eureka. He was living in Arcata in a house with other college students who were regularly using cocaine, but he did not want to be around that environment. As a result, he got a tent and a backpack and began living in the Redwood Forest while continuing to attend college. During this time in the forest, Shawn felt that God had given him a mission—to go to every church in Arcata and tell them to get the homeless off the streets. Over a period of time, he visited each church. Most responded by explaining what they were already doing for the homeless, but none offered what he believed to be a real solution. The last church he visited was Sunny Brae Church, led by Pastor Dirk Schultz. When Shawn arrived, he noticed that around 20 homeless individuals were already living on the church property. He shared what he believed God had told him and asked if he could stay there. The pastor agreed, and Shawn lived at the church for several months. Eventually, the city threatened legal action—stating that Pastor Dirk Schultz could face jail time and the church could be shut down if the situation continued. Shawn pleaded with the church not to give in, but in the end, he was the last person to leave. He was given a letter stating that he would be trespassed if he did not leave, and that the decision was not the church’s choice but the result of pressure from the city. After leaving, Shawn quit college and began standing in front of City Hall in Arcata, telling people what had happened. This led to the formation of a movement called “The People’s Project.” Hundreds of people joined him, and they protested what had happened. Eventually, the city allowed churches to let homeless individuals sleep inside their buildings under certain requirements. Shortly after this, Shawn moved on once again—this time being led to Vallejo, CA for another mission with homeless he never saw coming.</p></div>
-            </div>
-            <!-- Testimony 3: The Crack Head Preacher -->
-            <div class="testimony-card">
-                <div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/S-U-S.png" alt="testimony3"></div>
-                <div class="testimony-text"><h3>The Crack Head Preacher</h3><p>After leaving Arcata, Shawn found himself in Vallejo, CA. Once again, he felt that Christ was pushing him to be proactive in street ministry. He believed Christ instructed him to set up a table across from a pornography viewing booth store at an abandoned gas station. For months, he went there once a week, giving out pizza and chips while playing Christian music. The area was known as one of the worst parts of Vallejo for crack sales, prostitution, and gang activity. About a month into this outreach, a man named Hosea Perez, also known as Video, approached him. Shawn knew him somewhat and was aware that he traded porn videos for crack cocaine. Hosea told him that if he remained on the streets, he would continue to smoke crack, and he asked a question that many Christians might fear. He said, “Shawn, can I live with you? If I stay on the streets, I will keep smoking crack.” This became a crossroads moment in Shawn’s life. He could have turned away from everything Christ stood for and declared defeat, but instead, it was in this moment that Samson’s Unit Men’s Sober Living Home was born. He did not know whether Hosea might harm or rob him. He only knew that he was afraid, yet he chose to trust God more than his fear. After bringing him home, Hosea confessed that he had once been the head pastor of a church but had lost his congregation due to fornication. He was in tears and said he had no way off the streets. It was not long before Video repented and became a light on Sonoma Blvd. in Vallejo, CA. People who had once traded porn videos with him for drugs began to hear how he had changed and given up that life. He went on to become what some might call “The Ambassador,” someone God used so that others in the neighborhood could see the light. Many were amazed at Hosea Perez’s repentance, and only God knows how many lives were changed as a result. All he needed was someone to love him as Christ loved us.</p></div>
-            </div>
-            <!-- Testimony 4: Samson's Unit Men's Sober Living Home -->
-            <div class="testimony-card">
-                <div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-7.jpg" alt="testimony4"></div>
-                <div class="testimony-text"><h3>Samson's Unit Men's Sober Living Home</h3><p>After Hosea Perez moved in, Shawn was inspired to start a sober living home. Along with his uncle Charles and a few friends, he began building bunk beds in the two spare bedrooms of his home. They placed two bunk beds in each room, for a total of eight beds. After setting up some basic rules and regulations, he went to the Vallejo homeless shelter and started inviting men into his home. Before long, the house was full. Mike Yancy was a meth addict who got clean and went on to make over $60,000 a year working on manufactured homes. Another gentleman went on to become a counselor for teens in gangs. Not everyone benefited from the men’s home, but many found a new way of life. Many men from the Christian Help Center in Vallejo, CA found Christ’s love during this time. It was considered one of the craziest things to do by those around him, many of whom advised against it. However, Shawn remained thankful that he trusted Christ and was able to be used to show His love.</p></div>
-            </div>
-            <!-- Testimony 5: The Discovery Channel & Samson's Unit -->
-            <div class="testimony-card">
-                <div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/S-G-Tent.png" alt="testimony5"></div>
-                <div class="testimony-text"><h3>The Discovery Channel & Samson's Unit</h3><p>After Shawn started the men’s home, he encountered a man named Sean in the parking lot of a gas station in Vallejo. At that time, Sean was panhandling for drug money. He and his girlfriend, Gina, were living under a bridge in a tent and using heroin. Sean asked if he could pitch his tent in the backyard, and Shawn agreed. Although the house was already full and there was no room inside, he offered help in this way. They were given food and allowed to shower and use the restroom. While their behavior was not condoned, Shawn did not want them to risk overdosing under a bridge with no one around to help. Unexpectedly, a crew from the Discovery Channel arrived at the house from a television show called Addicted. They asked if they could place microphones on everyone and follow Sean and Gina around for a few weeks. That is exactly what they did, eventually taking Sean and Gina to a rehabilitation program. It was a surprising turn of events, considering the many possible outcomes that could have come from bringing heroin addicts into the home. Shawn hopes to help many more people like them in the future, this time with a team of experienced individuals. Most people would not have allowed them to stay in their backyard because of their addiction, but he believes it is important to show love to those going through the darkest moments of their lives. He sees this as a calling to help save people in the name of Jesus Christ and is grateful for the opportunity to be a light for them and for many more to come.</p></div>
-            </div>
+            <div class="testimony-card"><div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/How%20It%20All%20Begin.png" alt="testimony1"></div><div class="testimony-text"><h3>The Bakersfield Rescue Mission at 19</h3><p>At the age of 19, Shawn Polly flushed his mom’s meth and his great-uncle Billy Nix’s meth down the toilet and was kicked out of the house. He went on to live at the Bakersfield Rescue Mission, where he stayed in a dorm with around 200 men for over a year. During that time, he attended Bakersfield College and got a job while trying to rebuild his life. While in Bakersfield, he also started going to a church called Country Bible Church. One day, Shawn brought around 50 people from the Bakersfield Rescue Mission to church. They all loaded onto a city bus, and when they got off, it was a sight to see—a long line of the sick and afflicted walking about five blocks to get to the church. Some might say it looked like something out of the walking dead. That same day, Shawn and the pastor had gone and gotten supplies for a BBQ, and Shawn stayed outside cooking for everyone at the small Baptist church. Inside the church that day was his great-uncle Billy Nix, whose meth Shawn had flushed. Billy later told him what happened inside. The pastor had a breakdown and began yelling and calling people out by name, saying, “You have been coming here your entire life and you have brought nobody. Nineteen-year-old, homeless Shawn Polly has brought more people to church today than all of you put together for the entire time you’ve been here.” Shortly after that, the pastor began allowing homeless people to stay on the church property in tents, which sparked what many would describe as a kind of awakening within the church. Shawn had already left Bakersfield by the time this happened, moving on to something else he didn’t yet understand, but believes now was part of a bigger plan. What stands out about this moment is not just the conflict or the shock of it, but the impact—one young man, freshly homeless and trying to figure life out, ended up shifting the direction of an entire church without even realizing it at the time.</p></div></div>
+            <div class="testimony-card"><div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/SunnyBrae.png" alt="testimony2"></div><div class="testimony-text"><h3>Sunny Brae Church - Arcata, CA</h3><p>After leaving Bakersfield College, Shawn Polly transferred to College of the Redwoods in Eureka. He was living in Arcata in a house with other college students who were regularly using cocaine, but he did not want to be around that environment. As a result, he got a tent and a backpack and began living in the Redwood Forest while continuing to attend college. During this time in the forest, Shawn felt that God had given him a mission—to go to every church in Arcata and tell them to get the homeless off the streets. Over a period of time, he visited each church. Most responded by explaining what they were already doing for the homeless, but none offered what he believed to be a real solution. The last church he visited was Sunny Brae Church, led by Pastor Dirk Schultz. When Shawn arrived, he noticed that around 20 homeless individuals were already living on the church property. He shared what he believed God had told him and asked if he could stay there. The pastor agreed, and Shawn lived at the church for several months. Eventually, the city threatened legal action—stating that Pastor Dirk Schultz could face jail time and the church could be shut down if the situation continued. Shawn pleaded with the church not to give in, but in the end, he was the last person to leave. He was given a letter stating that he would be trespassed if he did not leave, and that the decision was not the church’s choice but the result of pressure from the city. After leaving, Shawn quit college and began standing in front of City Hall in Arcata, telling people what had happened. This led to the formation of a movement called “The People’s Project.” Hundreds of people joined him, and they protested what had happened. Eventually, the city allowed churches to let homeless individuals sleep inside their buildings under certain requirements. Shortly after this, Shawn moved on once again—this time being led to Vallejo, CA for another mission with homeless he never saw coming.</p></div></div>
+            <div class="testimony-card"><div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/S-U-S.png" alt="testimony3"></div><div class="testimony-text"><h3>The Crack Head Preacher</h3><p>After leaving Arcata, Shawn found himself in Vallejo, CA. Once again, he felt that Christ was pushing him to be proactive in street ministry. He believed Christ instructed him to set up a table across from a pornography viewing booth store at an abandoned gas station. For months, he went there once a week, giving out pizza and chips while playing Christian music. The area was known as one of the worst parts of Vallejo for crack sales, prostitution, and gang activity. About a month into this outreach, a man named Hosea Perez, also known as Video, approached him. Shawn knew him somewhat and was aware that he traded porn videos for crack cocaine. Hosea told him that if he remained on the streets, he would continue to smoke crack, and he asked a question that many Christians might fear. He said, “Shawn, can I live with you? If I stay on the streets, I will keep smoking crack.” This became a crossroads moment in Shawn’s life. He could have turned away from everything Christ stood for and declared defeat, but instead, it was in this moment that Samson’s Unit Men’s Sober Living Home was born. He did not know whether Hosea might harm or rob him. He only knew that he was afraid, yet he chose to trust God more than his fear. After bringing him home, Hosea confessed that he had once been the head pastor of a church but had lost his congregation due to fornication. He was in tears and said he had no way off the streets. It was not long before Video repented and became a light on Sonoma Blvd. in Vallejo, CA. People who had once traded porn videos with him for drugs began to hear how he had changed and given up that life. He went on to become what some might call “The Ambassador,” someone God used so that others in the neighborhood could see the light. Many were amazed at Hosea Perez’s repentance, and only God knows how many lives were changed as a result. All he needed was someone to love him as Christ loved us.</p></div></div>
+            <div class="testimony-card"><div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-7.jpg" alt="testimony4"></div><div class="testimony-text"><h3>Samson's Unit Men's Sober Living Home</h3><p>After Hosea Perez moved in, Shawn was inspired to start a sober living home. Along with his uncle Charles and a few friends, he began building bunk beds in the two spare bedrooms of his home. They placed two bunk beds in each room, for a total of eight beds. After setting up some basic rules and regulations, he went to the Vallejo homeless shelter and started inviting men into his home. Before long, the house was full. Mike Yancy was a meth addict who got clean and went on to make over $60,000 a year working on manufactured homes. Another gentleman went on to become a counselor for teens in gangs. Not everyone benefited from the men’s home, but many found a new way of life. Many men from the Christian Help Center in Vallejo, CA found Christ’s love during this time. It was considered one of the craziest things to do by those around him, many of whom advised against it. However, Shawn remained thankful that he trusted Christ and was able to be used to show His love.</p></div></div>
+            <div class="testimony-card"><div class="testimony-img"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/S-G-Tent.png" alt="testimony5"></div><div class="testimony-text"><h3>The Discovery Channel & Samson's Unit</h3><p>After Shawn started the men’s home, he encountered a man named Sean in the parking lot of a gas station in Vallejo. At that time, Sean was panhandling for drug money. He and his girlfriend, Gina, were living under a bridge in a tent and using heroin. Sean asked if he could pitch his tent in the backyard, and Shawn agreed. Although the house was already full and there was no room inside, he offered help in this way. They were given food and allowed to shower and use the restroom. While their behavior was not condoned, Shawn did not want them to risk overdosing under a bridge with no one around to help. Unexpectedly, a crew from the Discovery Channel arrived at the house from a television show called Addicted. They asked if they could place microphones on everyone and follow Sean and Gina around for a few weeks. That is exactly what they did, eventually taking Sean and Gina to a rehabilitation program. It was a surprising turn of events, considering the many possible outcomes that could have come from bringing heroin addicts into the home. Shawn hopes to help many more people like them in the future, this time with a team of experienced individuals. Most people would not have allowed them to stay in their backyard because of their addiction, but he believes it is important to show love to those going through the darkest moments of their lives. He sees this as a calling to help save people in the name of Jesus Christ and is grateful for the opportunity to be a light for them and for many more to come.</p></div></div>
         </div>
         <div style="text-align:center;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
     </div>
 </div>
 
 <!-- BECOME A FOUNDER -->
-<div id="becomeFounderPage" class="page">
-    <div class="container" style="padding: 60px 20px;">
-        <h2 class="section-title">✧ Join the Founding Board ✧</h2>
-        <div style="background: white; border-radius: 40px; padding: 40px; box-shadow: var(--shadow-light); max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.2rem; margin-bottom: 24px;">Seeking 15 passionate individuals to serve as founding board members.</p>
-            <ul style="margin: 24px 0 32px 32px; line-height: 1.7;">
-                <li>Establish 501(c)(3) nonprofit status</li>
-                <li>Secure land and funding for a 24/7 sanctuary</li>
-                <li>Develop policies for radical hospitality and safety</li>
-                <li>Build partnerships with local agencies, food banks, and churches</li>
-            </ul>
-            <p><strong>How to apply:</strong> Call <strong>405-832-4549</strong> or email <strong>openchurchproject1@gmail.com</strong></p>
-            <div style="margin-top: 36px; text-align: center;"><a href="#" data-page="home" class="back-home">← Return to Home</a></div>
-        </div>
-    </div>
-</div>
+<div id="becomeFounderPage" class="page"><div class="container" style="padding: 60px 20px;"><h2 class="section-title">✧ Join the Founding Board ✧</h2><div style="background: white; border-radius: 40px; padding: 40px; max-width: 800px; margin: 0 auto;"><p style="font-size: 1.2rem;">Seeking 15 passionate individuals to serve as founding board members.</p><ul style="margin: 24px 0 32px 32px;"><li>Establish 501(c)(3) nonprofit status</li><li>Secure land and funding for a 24/7 sanctuary</li><li>Develop policies for radical hospitality</li><li>Build partnerships with local agencies</li></ul><p><strong>How to apply:</strong> Call <strong>405-832-4549</strong> or email <strong>openchurchproject1@gmail.com</strong></p><div style="margin-top: 36px; text-align: center;"><a href="#" data-page="home" class="back-home">← Return to Home</a></div></div></div></div>
 
-<!-- START A SHELTER - no permits, just land -->
+<!-- START A SHELTER (with Join The Coalition button) -->
 <div id="shelterPage" class="page">
     <div class="container" style="padding: 50px 20px;">
         <h2 class="section-title">🏘️ Start a Shelter – Anyone with Land Can Do This</h2>
-        <div style="background: white; border-radius: 32px; padding: 36px; box-shadow: var(--shadow-light);">
-            <div class="grassroots-highlight">
-                <i class="fas fa-home" style="color: var(--warm-coral); font-size: 2rem;"></i>
-                <strong>You have land. You have a garage. You have a church. You can shelter.</strong>
-            </div>
-            <p><strong>Use what you already own:</strong> A finished basement, a detached garage, an extra bedroom, or a large backyard can become a safe refuge. We help you prepare the space and connect with guests.</p>
-            <p><strong>Churches, this is your moment:</strong> Your parking lot, fellowship hall, or unused classrooms can host safe parking or temporary shelter. County land, private property — use it all.</p>
+        <div style="background: white; border-radius: 32px; padding: 36px;">
+            <div class="grassroots-highlight"><i class="fas fa-home"></i> <strong>You have land. You have a garage. You have a church. You can shelter.</strong></div>
+            <p><strong>Use what you already own:</strong> A finished basement, detached garage, extra bedroom, or large backyard can become a safe refuge. We help you prepare the space and connect with guests.</p>
             <p><strong>How we support you:</strong> Advertising, volunteer coordination, resource gathering, and practical guidance.</p>
             <p>➡️ Ready to open your doors? Call 405-832-4549 or email openchurchproject1@gmail.com.</p>
         </div>
-        <div style="text-align:center; margin-top:36px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
+        <div class="page-join-btn">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdREtIOlqxxXP_v4EjQDnYn6ZSYH0oHSF3WX_SDw5c16Jd-1w/viewform?usp=header" target="_blank" rel="noopener">Start A Shelter</a>
+        </div>
+        <div style="text-align:center; margin-top: 20px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
     </div>
 </div>
 
 <!-- FIND SHELTER -->
-<div id="findShelterPage" class="page">
-    <div class="container" style="padding: 50px 20px;">
-        <h2 class="section-title">🏨 Find a Homeless Shelter – Oklahoma Locations</h2>
-        <div style="background: white; border-radius: 32px; padding: 32px; box-shadow: var(--shadow-light);">
-            <div style="margin-bottom: 20px;"><span style="font-weight: 700;">City Rescue Mission</span><br>800 W. California Ave, OKC | 📞 (405) 232-2709</div>
-            <div style="margin-bottom: 20px;"><span style="font-weight: 700;">Tulsa Day Center</span><br>415 W. Archer St, Tulsa | 📞 (918) 583-5588</div>
-            <div><span style="font-weight: 700;">Gospel Rescue Mission</span><br>323 Callahan St, Muskogee | 📞 (918) 682-8482</div>
-        </div>
-        <div style="text-align:center; margin-top:36px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
-    </div>
-</div>
+<div id="findShelterPage" class="page"><div class="container" style="padding: 50px 20px;"><h2 class="section-title">🏨 Find a Homeless Shelter – Oklahoma Locations</h2><div style="background: white; border-radius: 32px; padding: 32px;"><div><strong>City Rescue Mission</strong><br>800 W. California Ave, OKC | 📞 (405) 232-2709</div><div style="margin: 20px 0;"><strong>Tulsa Day Center</strong><br>415 W. Archer St, Tulsa | 📞 (918) 583-5588</div><div><strong>Gospel Rescue Mission</strong><br>323 Callahan St, Muskogee | 📞 (918) 682-8482</div></div><div style="text-align:center; margin-top:36px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div></div></div>
 
-<!-- FOOD MINISTRY - no permits -->
+<!-- LAUNCH SOUP KITCHEN / FOOD MINISTRY (with Join The Coalition button) -->
 <div id="foodMinistryPage" class="page">
     <div class="container" style="padding: 50px 20px;">
         <h2 class="section-title">🍽️ Start a Food Ministry – No Red Tape, Just Love</h2>
-        <div class="food-guide">
-            <div class="grassroots-highlight">
-                <i class="fas fa-hand-holding-heart" style="font-size: 2rem;"></i>
-                <strong>Jesus didn't wait for permission. Neither do we.</strong>
-            </div>
+        <div style="background: white; border-radius: 32px; padding: 36px;">
+            <div class="grassroots-highlight"><i class="fas fa-hand-holding-heart"></i> <strong>Jesus didn't wait for permission. Neither do we.</strong></div>
             <p>We help you launch a sack lunch program, food box distribution, soup kitchen, or any food outreach — immediately.</p>
             <p><strong>What we provide:</strong> Advertising, volunteer coordination, resource gathering, and practical guidance.</p>
-            <p>No applications, no fees, no waiting. Just loving our neighbors.</p>
             <p><strong>Get started:</strong> Call 405-832-4549 or email openchurchproject1@gmail.com.</p>
-            <div style="margin: 28px 0; background: #FEFAF5; border-radius: 28px; padding: 20px; text-align: center;">
-                <i class="fas fa-external-link-alt"></i> <strong>Need food donations?</strong> We’ll help you connect with local food banks.<br>
-                <a href="https://www.okfoodbank.org/" target="_blank" style="font-weight: bold;">Regional Food Bank of Oklahoma →</a>
-            </div>
-            <div style="text-align:center; margin-top: 32px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
         </div>
+        <div class="page-join-btn">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3C6t7l7CGzGyouNeehQdBDYRqKbR00Pga2rO84jHTb7evjw/viewform?usp=header" target="_blank" rel="noopener">Start A Food Ministry</a>
+        </div>
+        <div style="text-align:center; margin-top: 20px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
     </div>
 </div>
 
-<div id="gardensListPage" class="page">
-    <div class="container" style="padding: 60px 20px; text-align:center;">
-        <h2 class="section-title">🌿 Community Gardens in OK</h2>
-        <p>Listing coming soon — be a pioneer! Contact us to add your garden.</p>
-        <a href="#" data-page="garden" class="back-home">Back to Garden Guide</a>
+<div id="gardensListPage" class="page"><div class="container" style="padding: 60px 20px; text-align:center;"><h2 class="section-title">🌿 Community Gardens in OK</h2><p>Listing coming soon — be a pioneer! Contact us to add your garden.</p><a href="#" data-page="garden" class="back-home">Back to Garden Guide</a></div></div>
+
+<!-- GET INVOLVED PAGE – EIGHT FLYERS WITH "Join The Coalition" BUTTONS -->
+<div id="getInvolvedPage" class="page">
+    <div class="container" style="padding: 50px 20px;">
+        <h2 class="section-title">📢 Get Involved – Ways to Serve</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 20px;">Join the movement of radical hospitality. Below are opportunities to partner with us!</p>
+        <div class="flyers-grid">
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/GI-1.png" alt="Get Involved Flyer 1"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc3C6t7l7CGzGyouNeehQdBDYRqKbR00Pga2rO84jHTb7evjw/viewform?usp=header" target="_blank" rel="noopener">Start Private Food Ministry</a></div></div>
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/GI-2.png" alt="Get Involved Flyer 2"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdXNVH-V0rJzG02VDWAnnQKKJsnxHm0O9Jg9Yc03HLNgmMDUA/viewform?usp=publish-editor" target="_blank" rel="noopener">Register Your Church</a></div></div>
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Animal-Sanc.png" alt="Get Involved Flyer 3"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeccNFMCFxOFz-SrYlGbvg0CkOsoy19iw-V4YOG0fdDNvuylg/viewform?usp=header" target="_blank" rel="noopener">Start Animal Shelter</a></div></div>
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/garden.png" alt="Get Involved Flyer 4"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfDSynxtUTw583CxynJRpFeBs_lwvyDgKieMIihXDJmpCCq9A/viewform?usp=header" target="_blank" rel="noopener">Start Community Garden</a></div></div>
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Case-Worker.png" alt="Get Involved Flyer 5"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ8DCWKoW28wBatP_n4m5-qtW_DOqsneO0CnNyJUEt4G7nOQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Volunteers Needed</a></div></div>
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Trails.png" alt="Get Involved Flyer 6"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfhFXgqhM67zlM1i3wZxrN16KNqfYjsASh3YLMjWa5i_HWTjQ/viewform?usp=header" target="_blank" rel="noopener">Join The Trail Team</a></div></div>
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/GI-5.png" alt="Get Involved Flyer 7"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc3C6t7l7CGzGyouNeehQdBDYRqKbR00Pga2rO84jHTb7evjw/viewform?usp=header" target="_blank" rel="noopener">Register Your Church</a></div></div>
+            <div class="flyer-card"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Start-Shelter.png" alt="Get Involved Flyer 8"><div class="join-coalition-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdREtIOlqxxXP_v4EjQDnYn6ZSYH0oHSF3WX_SDw5c16Jd-1w/viewform?usp=header" target="_blank" rel="noopener">Start A Homeless Shelter</a></div></div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;"><p class="grassroots-highlight" style="display: inline-block;"><i class="fas fa-edit"></i> <strong>Love is not a bandaid!</strong><code></code></p></div>
+        <div style="text-align:center; margin-top: 36px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
+    </div>
+</div>
+
+<!-- HOMELAND LAND REGISTRATION PAGE (form removed, replaced with paragraph and button) -->
+<div id="registrationPage" class="page">
+    <div class="container" style="padding: 50px 20px;">
+        <h2 class="section-title">🏕️ Homeless Land Registration Form</h2>
+        <div class="info-box">
+            <p><strong>Homeless individuals and families in Oklahoma can fill out this form to be placed on a waiting list for a small piece of land to live on.</strong> This land is intended for those experiencing homelessness who want a stable, safe place to call home. By joining our coalition, you will be considered for future land opportunities. Click the button below to access the registration form.</p>
+        </div>
+        <div class="page-join-btn">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9UPUFTl1A1b-GeTxhjYRrMgNpyjYBCOsh0kBPBVemElUddg/viewform?usp=header" target="_blank" rel="noopener">Register For Land</a>
+        </div>
+        <div style="text-align:center; margin-top: 20px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
     </div>
 </div>
 
@@ -687,158 +782,68 @@
 
 <div class="audio-player">
     <button class="play-btn" id="playBtn"><i class="fas fa-play"></i></button>
-    <span style="margin:0 6px;">🎵 Theme</span>
+    <span>🎵 Theme</span>
     <input type="range" id="volumeControl" min="0" max="100" value="35" style="width:70px;">
 </div>
-<audio id="backgroundMusic" loop src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Holy-Spirit-Radiance.mp3"></audio>
+<audio id="backgroundMusic" loop src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Holy-Spirit-Radiance.mp34"></audio>
 
 <script>
-    // ============================================================
-    // 27 IMAGES – Each explicitly labeled 1 through 27.
-    // Images fully fit inside slider (object-fit: contain, centered)
-    // ============================================================
-    const imageUrls = [
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-1.png",  // Image 1 (.png)
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-2.png",  // Image 2 (.png)
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-3.jpg",  // Image 3
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-4.jpg",  // Image 4
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-5.jpg",  // Image 5
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-6.jpg",  // Image 6
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-7.jpg",  // Image 7
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-8.jpg",  // Image 8
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-9.jpg",  // Image 9
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-10.jpg",  // Image 10
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-11.jpg",  // Image 11
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-12.jpg",  // Image 12
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-13.jpg",  // Image 13
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-14.jpg",  // Image 14
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-15.jpg",  // Image 15
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-16.jpg",  // Image 16
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-17.jpg",  // Image 17
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-18.jpg",  // Image 18
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-19.jpg",  // Image 19
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-20.jpg",  // Image 20
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-21.jpg",  // Image 21
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-22.png",  // Image 22 (.png)
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-23.jpg",  // Image 23
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-24.jpg",  // Image 24
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-25.jpg",  // Image 25
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-26.jpg",  // Image 26
-        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-27.jpg"   // Image 27
+    // 27 images for slider (unchanged)
+    const correctUrls = [
+        "https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-1.png","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-2.png","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-3.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-4.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-5.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-6.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-7.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-8.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-9.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-10.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-11.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-12.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-13.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-14.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-15.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-16.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-17.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-18.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-19.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-20.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-21.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-22.png","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-23.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-24.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-25.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-26.jpg","https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/Pic-27.jpg"
     ];
-    // ============================================================
-
-    const totalSlides = imageUrls.length;
-    let currentIndex = 0;
-    let autoInterval = null;
+    let currentIndex = 0, autoInterval;
     const sliderWrapper = document.getElementById('sliderWrapper');
     const dotsContainer = document.getElementById('sliderDots');
-    const prevBtn = document.getElementById('prevSlide');
-    const nextBtn = document.getElementById('nextSlide');
-
     function buildSlides() {
         sliderWrapper.innerHTML = '';
-        for (let i = 0; i < totalSlides; i++) {
-            const slideDiv = document.createElement('div');
-            slideDiv.className = 'slide';
-            const img = document.createElement('img');
-            img.src = imageUrls[i];
-            img.alt = `Gallery Image ${i+1} - The Open Church Project (full view)`;
-            img.loading = "eager";
-            slideDiv.appendChild(img);
-            sliderWrapper.appendChild(slideDiv);
-        }
+        correctUrls.forEach(url => {
+            let slide = document.createElement('div'); slide.className = 'slide';
+            let img = document.createElement('img'); img.src = url; img.alt = 'Gallery';
+            slide.appendChild(img); sliderWrapper.appendChild(slide);
+        });
     }
-
     function buildDots() {
         dotsContainer.innerHTML = '';
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === currentIndex) dot.classList.add('active');
+        correctUrls.forEach((_, i) => {
+            let dot = document.createElement('div'); dot.classList.add('dot');
+            if(i === currentIndex) dot.classList.add('active');
             dot.addEventListener('click', () => { goToSlide(i); resetAutoScroll(); });
             dotsContainer.appendChild(dot);
-        }
-    }
-
-    function updateDots() {
-        document.querySelectorAll('.dot').forEach((dot, idx) => {
-            if (idx === currentIndex) dot.classList.add('active');
-            else dot.classList.remove('active');
         });
     }
+    function updateDots() { document.querySelectorAll('.dot').forEach((d,i)=> i===currentIndex ? d.classList.add('active') : d.classList.remove('active')); }
+    function goToSlide(i) { currentIndex = (i + correctUrls.length) % correctUrls.length; sliderWrapper.style.transform = `translateX(${-currentIndex * 100}%)`; updateDots(); }
+    function nextSlide() { goToSlide(currentIndex+1); }
+    function prevSlide() { goToSlide(currentIndex-1); }
+    function startAutoScroll() { if(autoInterval) clearInterval(autoInterval); autoInterval = setInterval(nextSlide, 2000); }
+    function resetAutoScroll() { if(autoInterval) clearInterval(autoInterval); startAutoScroll(); }
+    buildSlides(); buildDots(); goToSlide(0); startAutoScroll();
+    document.getElementById('prevSlide').addEventListener('click', (e) => { e.preventDefault(); prevSlide(); resetAutoScroll(); });
+    document.getElementById('nextSlide').addEventListener('click', (e) => { e.preventDefault(); nextSlide(); resetAutoScroll(); });
+    document.querySelector('.hero-slider').addEventListener('mouseenter', () => { if(autoInterval) clearInterval(autoInterval); autoInterval = null; });
+    document.querySelector('.hero-slider').addEventListener('mouseleave', startAutoScroll);
 
-    function goToSlide(index) {
-        if (index < 0) index = totalSlides - 1;
-        if (index >= totalSlides) index = 0;
-        currentIndex = index;
-        sliderWrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
-        updateDots();
-    }
-
-    function nextSlide() { goToSlide(currentIndex + 1); }
-    function prevSlide() { goToSlide(currentIndex - 1); }
-
-    function startAutoScroll() {
-        if (autoInterval) clearInterval(autoInterval);
-        autoInterval = setInterval(() => nextSlide(), 2000);
-    }
-
-    function resetAutoScroll() { if (autoInterval) { clearInterval(autoInterval); startAutoScroll(); } }
-    function stopAutoScrollOnHover() {
-        const container = document.querySelector('.hero-slider');
-        container.addEventListener('mouseenter', () => { if (autoInterval) clearInterval(autoInterval); autoInterval = null; });
-        container.addEventListener('mouseleave', () => startAutoScroll());
-    }
-
-    buildSlides();
-    buildDots();
-    goToSlide(0);
-    startAutoScroll();
-    stopAutoScrollOnHover();
-    prevBtn.addEventListener('click', (e) => { e.preventDefault(); prevSlide(); resetAutoScroll(); });
-    nextBtn.addEventListener('click', (e) => { e.preventDefault(); nextSlide(); resetAutoScroll(); });
-
-    // Page navigation
+    // Page navigation (all pages including new ones)
     const pages = {
-        home: document.getElementById('homePage'),
-        garden: document.getElementById('gardenPage'),
-        founder: document.getElementById('founderPage'),
-        shelter: document.getElementById('shelterPage'),
-        gardensList: document.getElementById('gardensListPage'),
-        findShelter: document.getElementById('findShelterPage'),
-        foodMinistry: document.getElementById('foodMinistryPage'),
-        becomeFounder: document.getElementById('becomeFounderPage')
+        home: document.getElementById('homePage'), garden: document.getElementById('gardenPage'), animalShelter: document.getElementById('animalShelterPage'),
+        events: document.getElementById('eventsPage'), founder: document.getElementById('founderPage'), shelter: document.getElementById('shelterPage'),
+        gardensList: document.getElementById('gardensListPage'), findShelter: document.getElementById('findShelterPage'),
+        foodMinistry: document.getElementById('foodMinistryPage'), becomeFounder: document.getElementById('becomeFounderPage'),
+        getInvolved: document.getElementById('getInvolvedPage'), registration: document.getElementById('registrationPage')
     };
-    function showPage(id) {
-        Object.values(pages).forEach(p => { if(p) p.classList.remove('active-page'); });
-        if(pages[id]) pages[id].classList.add('active-page');
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.classList.remove('active-page-link');
-            if(link.getAttribute('data-page') === id) link.classList.add('active-page-link');
-        });
-        window.scrollTo(0,0);
-    }
-    document.querySelectorAll('[data-page]').forEach(el => {
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = el.getAttribute('data-page');
-            if(page && pages[page]) showPage(page);
-        });
-    });
+    function showPage(id) { Object.values(pages).forEach(p => p?.classList.remove('active-page')); if(pages[id]) pages[id].classList.add('active-page'); document.querySelectorAll('.nav-links a').forEach(link => { link.classList.remove('active-page-link'); if(link.dataset.page === id) link.classList.add('active-page-link'); }); window.scrollTo(0,0); }
+    document.querySelectorAll('[data-page]').forEach(el => el.addEventListener('click', (e) => { e.preventDefault(); let p = el.dataset.page; if(p && pages[p]) showPage(p); }));
 
-    // Audio player
+    // Audio
     const audio = document.getElementById('backgroundMusic');
-    const playBtnAudio = document.getElementById('playBtn');
-    const volCtrl = document.getElementById('volumeControl');
-    const icon = playBtnAudio.querySelector('i');
+    const playBtn = document.getElementById('playBtn');
+    const vol = document.getElementById('volumeControl');
+    const icon = playBtn.querySelector('i');
     audio.volume = 0.35;
     audio.play().catch(()=>{});
-    playBtnAudio.addEventListener('click',()=>{
-        if(audio.paused) { audio.play(); icon.className = 'fas fa-pause'; } 
-        else { audio.pause(); icon.className = 'fas fa-play'; }
-    });
-    volCtrl.addEventListener('input',()=> audio.volume = volCtrl.value/100);
+    playBtn.addEventListener('click', () => { if(audio.paused) { audio.play(); icon.className = 'fas fa-pause'; } else { audio.pause(); icon.className = 'fas fa-play'; } });
+    vol.addEventListener('input', () => audio.volume = vol.value/100);
 </script>
 </body>
 </html>
