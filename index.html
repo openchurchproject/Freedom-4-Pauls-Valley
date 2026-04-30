@@ -255,6 +255,7 @@
             border-radius: 60px;
             font-weight: 600;
             display: inline-block;
+            text-decoration: none;
         }
         .cta-button:hover {
             background: var(--accent-glow);
@@ -587,18 +588,20 @@
             <li><a href="#" data-page="findShelter">🏨 Find a Shelter</a></li>
             <li><a href="#" data-page="getInvolved">📢 Get Involved</a></li>
             <li><a href="#" data-page="registration">📝 Homeless Land Registration</a></li>
-            <!-- DONATE BUTTON REMOVED FROM HEADER -->
+            <!-- NEW: Oklahoma Safe Parking button in navigation bar -->
+            <li><a href="https://71240.github.io/OK-Network/" target="_blank" rel="noopener noreferrer" style="background: #2C3E3F; color: white; border-radius: 40px; padding: 8px 20px;">🚗 Oklahoma Safe Parking</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- HOME PAGE (unchanged) -->
+<!-- HOME PAGE -->
 <div id="homePage" class="page active-page">
     <section class="hero">
         <div class="container">
             <h1>Over 300 homeless need land</h1>
             <p style="margin: 20px auto; max-width: 680px;">We are in the process of forming several community homesteads in Oklahoma. If you want to help you can visit the get involved page or contact us! We have over 100 homeless children on our homeless land registration form. We also have over 300 people in total and over 50 animals. If you want to join a community we will be pooling money together for a down payment on land in Oklahoma. Send us an email to be added to our Facebook group. In this group we are discussing the first community forming. Keep your head up and keep praying!</p>
-            <a href="#" data-page="becomeFounder" class="cta-button">Become a Founding Board Member →</a>
+            <!-- Changed button: text + link to music platform -->
+            <a href="https://www.singanewpsalm.church" target="_blank" rel="noopener noreferrer" class="cta-button">🎵 Check out our music platform →</a>
         </div>
     </section>
     <main class="container">
@@ -623,11 +626,9 @@
                 <div class="feature-card"><div class="feature-icon"><i class="fas fa-briefcase"></i></div><div class="feature-content"><h3>Job Department</h3><p>Resume writing, interview prep, job placement.</p></div></div>
             </div>
         </section>
-        <div style="background: #F3EFE8; border-radius: 32px; padding: 40px; text-align: center; margin: 40px 0;">
-            <h2 style="font-family: 'Playfair Display';">Stage 1: Founding Board Members</h2>
-            <p style="margin-top: 12px;">We are seeking 15 committed board members to establish vision, governance, and 501(c)(3) status.</p>
-            <div style="background: rgba(226,124,93,0.12); display: inline-block; padding: 10px 28px; border-radius: 60px; margin-top: 20px;">📞 405-355-8037 ✉️ openchurchproject1@gmail.com</div>
-        </div>
+        
+        <!-- Stage 1 section REMOVED. No duplicate button here anymore -->
+        
         <section>
             <h2 class="section-title">Example Project Blueprint</h2>
             <div style="text-align:center;"><img src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/OCP-BP.png" alt="blueprint" style="max-width:100%; border-radius: 24px;"></div>
@@ -683,7 +684,7 @@
 <!-- EVENTS PAGE -->
 <div id="eventsPage" class="page"><div class="container" style="padding: 50px 20px;"><h2 class="section-title">✨ Upcoming Gatherings & Outreach ✨</h2><div class="flyer-container"><img class="flyer-image" src="https://github.com/openchurchproject/Freedom-4-Pauls-Valley/raw/main/LYN-TD-Flyer.jpg" alt="Love Your Neighbor - Together Day Festival Flyer"><a href="https://www.durantcharities.org" target="_blank" class="register-btn"><i class="fas fa-ticket-alt"></i> Register to Vend at durantcharities.org</a><p style="margin-top: 24px;">✨ Vendor spots, volunteers, and sponsors welcome. Join us in spreading radical hospitality! ✨</p></div><div style="background: white; border-radius: 32px; padding: 32px;"><h3 style="font-family: 'Playfair Display';">More Events Coming Soon</h3><p>Monthly community meals, volunteer training, garden workshops, and animal adoption days. Contact us to partner.</p></div><div style="text-align:center; margin-top:36px;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div></div></div>
 
-<!-- FOUNDER PAGE (unchanged, all testimonies) -->
+<!-- FOUNDER PAGE -->
 <div id="founderPage" class="page">
     <div class="container" style="padding: 50px 20px;">
         <h2 class="section-title">Meet the Founder & Hear Some Testimonies</h2>
@@ -702,9 +703,6 @@
         <div style="text-align:center;"><a href="#" data-page="home" class="back-home">← Back to Home</a></div>
     </div>
 </div>
-
-<!-- BECOME A FOUNDER -->
-<div id="becomeFounderPage" class="page"><div class="container" style="padding: 60px 20px;"><h2 class="section-title">✧ Join the Founding Board ✧</h2><div style="background: white; border-radius: 40px; padding: 40px; max-width: 800px; margin: 0 auto;"><p style="font-size: 1.2rem;">Seeking 15 passionate individuals to serve as founding board members.</p><ul style="margin: 24px 0 32px 32px;"><li>Establish 501(c)(3) nonprofit status</li><li>Secure land and funding for a 24/7 sanctuary</li><li>Develop policies for radical hospitality</li><li>Build partnerships with local agencies</li></ul><p><strong>How to apply:</strong> Call <strong>405-355-8037</strong> or email <strong>openchurchproject1@gmail.com</strong></p><div style="margin-top: 36px; text-align: center;"><a href="#" data-page="home" class="back-home">← Return to Home</a></div></div></div></div>
 
 <!-- START A SHELTER -->
 <div id="shelterPage" class="page">
@@ -765,7 +763,7 @@
     </div>
 </div>
 
-<!-- HOMELAND LAND REGISTRATION PAGE (modified: added brighter button + explanatory paragraph, no content removed) -->
+<!-- HOMELAND LAND REGISTRATION PAGE -->
 <div id="registrationPage" class="page">
     <div class="container" style="padding: 50px 20px;">
         <h2 class="section-title">🏕️ Homeless Land Registration Form</h2>
@@ -773,13 +771,13 @@
             <p><strong>Homeless individuals and families in Oklahoma can fill out this form to be placed on a waiting list for a small piece of land to live on.</strong> This land is intended for those experiencing homelessness who want a stable, safe place to call home. By joining our coalition, you will be considered for future land opportunities. Click the Register For Free Land button below to access the registration form or the 🌟 Active Land Projects button to look for an active community project.</p>
         </div>
         
-        <!-- NEW: Brighter button "Active Land Projects" with link and explanatory paragraph (added above existing Register button) -->
+        <!-- Brighter button "Active Land Projects" -->
         <div style="text-align: center; margin: 25px 0 15px;">
             <a href="https://openchurchproject.github.io/OCP-Land-1/" target="_blank" rel="noopener" style="background: #FF8C42; color: white; padding: 14px 36px; border-radius: 60px; font-weight: 700; font-size: 1.2rem; display: inline-block; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.1s ease, background 0.2s;">🌟 Active Land Projects</a>
             <p style="margin-top: 18px; font-size: 1.05rem; background: #FFF4E6; padding: 12px 20px; border-radius: 60px; display: inline-block; color: #2C3E3F;">💡 If homeless people can afford $50–$100 a month they can sign-up for one of our community projects.</p>
         </div>
         
-        <!-- Original Register For Free Land button (unchanged) -->
+        <!-- Original Register For Free Land button -->
         <div class="page-join-btn">
             <a href="https://openchurchproject.github.io/OCP-Land-1/" target="_blank" rel="noopener">Register For Free Land</a>
         </div>
@@ -793,7 +791,6 @@
             <div><h3>The Open Church Project</h3><p>24/7 sanctuary of hope and healing coming soon.</p></div>
             <div><h3>Contact</h3><p><i class="fas fa-phone"></i> 405-355-8037<br><i class="fas fa-envelope"></i> openchurchproject1@gmail.com</p></div>
             <div><h3>Core Values</h3><p>❤️ Radical Hospitality · 🤝 Unconditional Love · 🌱 Practical Empowerment</p></div>
-            <!-- DONATE BUTTON REMOVED FROM FOOTER -->
         </div>
         <div class="copyright">© 2026 The Open Church Project. All rights reserved.</div>
     </div>
@@ -843,12 +840,12 @@
     document.querySelector('.hero-slider').addEventListener('mouseenter', () => { if(autoInterval) clearInterval(autoInterval); autoInterval = null; });
     document.querySelector('.hero-slider').addEventListener('mouseleave', startAutoScroll);
 
-    // Page navigation (all pages including new ones)
+    // Page navigation (all pages)
     const pages = {
         home: document.getElementById('homePage'), garden: document.getElementById('gardenPage'), animalShelter: document.getElementById('animalShelterPage'),
         events: document.getElementById('eventsPage'), founder: document.getElementById('founderPage'), shelter: document.getElementById('shelterPage'),
         gardensList: document.getElementById('gardensListPage'), findShelter: document.getElementById('findShelterPage'),
-        foodMinistry: document.getElementById('foodMinistryPage'), becomeFounder: document.getElementById('becomeFounderPage'),
+        foodMinistry: document.getElementById('foodMinistryPage'),
         getInvolved: document.getElementById('getInvolvedPage'), registration: document.getElementById('registrationPage')
     };
     function showPage(id) { Object.values(pages).forEach(p => p?.classList.remove('active-page')); if(pages[id]) pages[id].classList.add('active-page'); document.querySelectorAll('.nav-links a').forEach(link => { link.classList.remove('active-page-link'); if(link.dataset.page === id) link.classList.add('active-page-link'); }); window.scrollTo(0,0); }
